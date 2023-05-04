@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        background-color: rgb(170, 167, 203);
+        text-align: center;
+        
+        margin-left:30%;
+        margin-right:30%;
+        padding-bottom: 2%;
+        padding-top: 1%;
+        margin-top: 5%;
+        
+    }
+    body{
+        background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    }
+</style>
+<body>
+    <form action="#" id="form">
+        <h1 style="text-align: center;">Welcome to Sharpner</h1>
+        <h3>login</h3>
+        <p id="p"></p>
+        <label for="email">Email : </label>
+        <input type="email" name="email id" id="eml"><br><br>
+        <label for="password">Password : </label>
+        <input type="password" name="password" id="pass"><br><br> 
+        <input type="submit" id="sub">
+    </form>
+</body>
+<script>
+    const s=document.getElementById('sub'), a=document.getElementById('eml');f=document.getElementById('form');
+    s.addEventListener('mouseover',function(){
+        this.style.color = "red";
+    });
+    a.addEventListener('click', function(){
+        document.getElementById("p").innerHTML += "Enter email id" + "<br>";
+    })
+    s.addEventListener('mouseout',function(){
+        this.style.color = "black";
+    });
+</script>
+</html>
