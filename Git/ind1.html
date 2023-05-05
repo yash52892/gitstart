@@ -26,20 +26,18 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
-      <li>Item 5</li>
     </ul>
    </div>
   </div>
 <script>
-    let i2= document.getElementsByTagName('li');
-    let i1= document.getElementsByClassName('list-group-item');
+    let i2= document.querySelectorAll('li:nth-child(odd)');
+    let i1= document.querySelectorAll('.list-group-item');
     for(let i=0; i<i2.length;i++){
-      i2[i].style.background='gray';
+      i2[i].style.background='green';
     }
-    for(let j=0; j<i1.length;j++){
-      i1[j].style.background='green';
-     }
-
+      i1[1].style.background='green';
+      i1[1].style.color='green';
+      i1[2].style.display='none';
 </script>
 </body>
 </html>
