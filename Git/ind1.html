@@ -26,9 +26,20 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li>Item 5</li>
     </ul>
    </div>
   </div>
+<script>
+    let i2= document.getElementsByTagName('li');
+    let i1= document.getElementsByClassName('list-group-item');
+    for(let i=0; i<i2.length;i++){
+      i2[i].style.background='gray';
+    }
+    for(let j=0; j<i1.length;j++){
+      i1[j].style.background='green';
+     }
 
+</script>
 </body>
 </html>
