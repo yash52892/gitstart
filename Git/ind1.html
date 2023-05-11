@@ -30,15 +30,13 @@
    </div>
   </div>
 <script>
-    let i2= document.querySelectorAll('li:nth-child(odd)');
-    let i1= document.querySelectorAll('.list-group-item');
-    for(let i=0; i<i2.length;i++){
-      i2[i].style.background='green';
-    }
-    for(let j=0; j<i1.length;j++){
-      i1[j].style.background='green';
-     }
-
+  var hello=document.createTextNode('hello world');
+  var div=document.createElement('div');
+   var ac=document.querySelector('header .container');
+   var h=document.querySelector('h1');
+   div.appendChild(hello);
+   ac.insertBefore(div,h);
+   console.log(div);
 </script>
 </body>
 </html>
