@@ -26,6 +26,8 @@ var desc= document.getElementById('desc').value;
   btn.className="btn btn-danger btn-sm float-right delete";
   edit.className="btn btn-info btn-sm float-right"; 
   li.appendChild(document.createTextNode(item));
+  li.appendChild(document.createTextNode(" "));
+  li.appendChild(document.createTextNode(desc));
   itemList.appendChild(li);
   li.appendChild(edit);
   li.appendChild(btn);
@@ -37,7 +39,8 @@ var text=e.target.value.toLowerCase();
 var items=itemList.getElementsByTagName('li');
 Array.from(items).forEach(function(item){
   var itemName= item.firstChild.textContent;
-  if(itemName.toLocaleLowerCase().indexOf(text)!= -1){
+  var descName= item.childNodes[2].textContent;
+  if(itemName.toLocaleLowerCase().indexOf(text)!= -1 || descName.toLocaleLowerCase().indexOf(text)!= -1){
     item.style.display='block';
   }
   else{
