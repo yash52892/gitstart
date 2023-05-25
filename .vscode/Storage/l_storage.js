@@ -10,8 +10,10 @@ form.onsubmit=function add_details(e){
         oname:_name.value, oemail:_email.value, ophone:_phone.value
     }
     localStorage.setItem(obj.oemail,JSON.stringify(obj));
-    let newObject = localStorage.getItem(obj.oemail);
-    let txt=JSON.parse(newObject);
-    
-    p.innerHTML = obj.oname+"-"+obj.oemail+"-"+obj.ophone;
+    let newObject = JSON.parse(localStorage.getItem(obj.oemail));
+    let txt=obj.oname+"-"+obj.oemail+"-"+obj.ophone;
+    let li=document.createElement('li');
+    let t=document.createTextNode(txt);
+    li.appendChild(t);
+    p.appendChild(li);
 }
