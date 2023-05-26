@@ -15,13 +15,28 @@ form.onsubmit=function add_details(e){
     let li=document.createElement('li');
     li.textContent=txt;
     let btn=document.createElement('input');
+    let edt=document.createElement('input');
     btn.type="button";
     btn.value="Delete"; 
+    edt.type="button";
+    edt.value="Edit";
+    edt.onclick=function data_edit(){
+        let n=document.getElementById('names');
+        let e=document.getElementById('email');
+        let ph=document.getElementById('phone');
+        n.value=obj.oname;
+        e.value=obj.oemail;
+        ph.value=obj.ophone;
+        localStorage.removeItem(obj.oemail);
+        p.removeChild(li);
+        n.focus();
+    }
     btn.onclick=function del(){
         localStorage.removeItem(obj.oemail);
         p.removeChild(li);
     }
     li.appendChild(btn);
+    li.appendChild(edt);
     p.appendChild(li);
     //let data=document.getElementsByClassName('list');
    // data.append-btn(btn);
