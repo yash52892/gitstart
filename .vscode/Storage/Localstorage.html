@@ -9,17 +9,22 @@
 <body>
     <div class="container">
     <form id="form">
-        <label for="Name">Name</label>
-        <input type="text" id="names" placeholder="name">
-        <label for="Email">Email</label>
-        <input type="email" id="email">
-        <label for="phone">Phone Number</label>
-        <input type="number" id="phone">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <label for="text">Description</label>
+        <input type="text" id="text">
+        <label for="catagory">Catagory</label>
+        <select id="catagory" name="Catagory">
+            <option value="Movie">Movie</option>
+            <option value="Food">Food</option>
+            <option value="Style">Style</option>
+            <option value="Education">Education</option>
+          </select>
         <label for="submit" id="sub"></label>
         <input type="submit">
     </form>
 </div>
-<ul id="para">List of students</ul>
+<ul id="para">List of Expenses</ul>
 </body>
 <script src="l_storage.js"></script>
 </html>
