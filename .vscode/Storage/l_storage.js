@@ -1,13 +1,13 @@
-var _name=document.getElementById('names');
-var _email=document.getElementById('email');
-var _phone=document.getElementById('phone');
+var _amount=document.getElementById('amount');
+var _text=document.getElementById('text');
+var _catagory=document.getElementById('catagory');
 var form=document.getElementById('form');
 var p=document.getElementById('para');
 
 form.onsubmit=function add_details(e){
     e.preventDefault();
     var obj={
-        oname:_name.value, oemail:_email.value, ophone:_phone.value
+        oname:_amount.value, oemail:_text.value, ophone:_catagory.value
     }
     localStorage.setItem(obj.oemail,JSON.stringify(obj));
     let newObject = JSON.parse(localStorage.getItem(obj.oemail));
@@ -21,9 +21,9 @@ form.onsubmit=function add_details(e){
     edt.type="button";
     edt.value="Edit";
     edt.onclick=function data_edit(){
-        let n=document.getElementById('names');
-        let e=document.getElementById('email');
-        let ph=document.getElementById('phone');
+        let n=document.getElementById('amount');
+        let e=document.getElementById('text');
+        let ph=document.getElementById('catagory');
         n.value=obj.oname;
         e.value=obj.oemail;
         ph.value=obj.ophone;
