@@ -2,38 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    .form-group{
-        border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-    }
-    input{
-        width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-    }
-</style>
 <body>
-    <h3 style="text-align: center;">Add details</h3>
-    <form id="form">
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputname" aria-describedby="emailHelp" placeholder="Enter Name"><br>
-          <input type="email" class="form-control" id="exampleInputemail" placeholder=" Enter Email"><br>
-        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
-    </div>
-      </form>
-      <p id="p"></p>
+    <form onsubmit="add_to_local(event)">
+        <label>Name
+            <input type="'text" name="username" autocomplete="given-name" required/>
+        </label>
+        
+        <label>Email id
+            <input type="'email" name="email" autocomplete="family-name" required>
+        </label>        
+        
+        <label>Phone number
+            <input type="'number" name="phonenumber" required/>
+        </label>
+        
+        <input type="submit"></input>
+    </form>
+    <ul id="list_of_users"></ul>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-<script src="cloudstorage.js"></script>
+<script src=cloudstorage.js>
+</script>
 </html>
