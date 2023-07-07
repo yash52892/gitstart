@@ -1,20 +1,17 @@
-var name1=document.getElementById('exampleInputname');
-var email=document.getElementById('exampleInputemail');
-var form=document.getElementById('form');
-
-form.onsubmit=function myFunction(e){
-    e.preventDefault();
-    let n=name1.value;
-    let ema=email.value;
-    let obj={
-        n,ema
+ function add_to_local(event){
+        event.preventDefault();
+    const name=event.target.username.value;
+    const email=event.target.email.value;
+    const phone=event.target.phonenumber.value;
+    const obj={
+        name, email, phone
     };
-
-    axios.post("https://crudcrud.com/api/6eb95dbbe7a945e19c04d39db4f5a954/appointmentdata", obj)
-    .then((res)=>{
-        document.getElementById("p").innerHTML=(res);
-    })
-    .catch((err)=>{
-        document.getElementById("p").innerHTML="something went wrong"; 
-    })
-};
+    localStorage.setItem(obj.email, JSON.stringify(obj))
+    showusers(obj);
+}
+function showusers(obj){
+    const parent=document.getElementById("list_of_users")
+    const child=document.createElement('li');
+    child.textContent=obj.name+'-'+obj.email+'-'+obj.phone;
+    parent.appendChild(child)
+}
